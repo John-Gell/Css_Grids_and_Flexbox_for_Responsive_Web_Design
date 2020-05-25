@@ -1,0 +1,72 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: Arial, Geneva, sans-serif;
+}
+a {
+	color: #2772B0;
+}
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+	background-color: #fff;
+}
+
+div img {
+	width: 100%;
+	max-width: 250px; 
+}
+
+article {
+	float: left;
+	min-width: 250px;
+}
+
+.quarter {
+	width: 20%;
+	margin: 2%;
+}
+
+.first {
+	clear: left;
+}
+
+.third {
+	width: 33%;
+}
+
+.twoThirds{ 
+	width: 67%;
+}
+
+.half {
+	width: 50%;
+}
+
+.border {
+	border: 3px solid black;
+}
+/* grid system -- mobile first! */
+
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px)  {
+
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+
+}
