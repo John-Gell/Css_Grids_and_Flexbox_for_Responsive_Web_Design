@@ -69,3 +69,22 @@ html {
 ```
 
 -   this will apply the border-box to all elements on the page. 
+
+# Flexbox
+
+-   This is the first actual layout tool from CSS
+
+## Important terminology
+
+-   Flex container
+    -   The "parent" element that holds the flex items. Does not need to be styled but can be. 
+-   Flex Items
+    -   The individual items that are to be styled. 
+-   Main Axis
+    -   matches the direction of the flex container. 
+-   Cross Axis
+    -   the right angle axis to the main axis. 
+
+## Details about flexbox
+
+-   There is some browser support issues with flexbox, this leads to minor syntax tweaks that make this a pain in the ass. Everything shown in this course is "Standards Compliant" so it will run on Chrome and Firefox without a hitch but everything else may need prefixes or another fix. 

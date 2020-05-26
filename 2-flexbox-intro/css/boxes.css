@@ -6,11 +6,22 @@ ul {
 	padding: 0;
 	margin: 0;
 	border: 1px dotted red;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	height: 400px;
+	align-items: flex-start;
 }
 li {
 	border: 1px solid #999;
 	margin: 0.5em;
 	padding: 0.5em;
+}
+
+.flex2 {
+	border: 5px dashed blue;
+	order: 2;
+	flex: 2 1 40%;
 }
 
 
