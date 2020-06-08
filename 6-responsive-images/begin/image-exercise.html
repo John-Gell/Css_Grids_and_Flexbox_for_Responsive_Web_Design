@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="style.css"></link>	
 	<!--Browser compatability scripting for image-->
 	<script>
 		// Picture element HTML5 shiv
@@ -14,9 +15,9 @@
 	<!-- visit http://scottjehl.github.io/picturefill/ for picturefill source -->
 	<div class="bkgdimg"></div>
 	<picture>
-		<source srcset="img/peace-pie-original.jpg" media="(min-width: px)"> <!--desktop on wifi, no speed concerns. -->
-		<source srcset="img/peace-pie-500.jpg" media="(min-width: 2400px)"> <!--balanced loading for larger mobile devices-->
-		<img src="img/peace-pie-150.jpg" alt="the Peace pie image at minimum dimension"> <!--fallback image -->
-	</picture>
+		<source srcset="img/peace-pie-original.jpg" media="(min-width: 1200px)"> <!--checking the effect of comments-->
+		<source srcset="img/peace-pie-500.jpg" media="(min-width: 500px)">
+		<img srcset="img/peace-pie-150.jpg" alt="…">
+	  </picture>
 </body>
 </html>
