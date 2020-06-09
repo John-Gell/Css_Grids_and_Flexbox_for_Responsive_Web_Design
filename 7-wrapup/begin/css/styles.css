@@ -36,6 +36,11 @@ nav ul.full-width {
   overflow: auto;
 
 }
+
+.header-image {
+  height: 0;
+  background-image: none;
+}
 /* splits nav into 2 columns
 http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
 nav li:nth-child(even) {
@@ -75,6 +80,7 @@ div.row {
 [class*='sidebar'] {
   border: 1px solid #00c4c7;
   border-radius: 10px;
+
 }
 [class*='sidebar'] h3 {
   margin: 0;
@@ -96,6 +102,27 @@ div.row {
 .sidebar-secondary h3 {
   background-color: #c80060;
 }
+
+.piepins {
+  border: 1px solid #C80060;
+  border-radius: 10px;
+  max-width: 300px;
+}
+.piepins figcaption {
+  margin: 0;
+  color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0.5em;
+}
+.piepins img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  max-width: 300px;
+  display: block; /* without this, there is a gap between the image and border -- space for descenders in text, for inline elements */
+} 
+
+
 blockquote {
   padding: 0em;
   margin: 0;
@@ -148,105 +175,146 @@ footer a {
 .row.col-1-4 {
   margin-top: 3em;
 }
+
+/*pintrest layout*/
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+li {
+  flex-basis: 285px;
+  flex-shrink: 1;
+  flex-grow: 1;
+	margin: 2px;
+}
+
+img {
+	flex: auto;
+}
 /* global alignment options */
 .reverse {
   flex-direction: row-reverse;
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 550px) { 
-  .wrapper {
-      width: 97%;
-      max-width: 767px;
-  }
-div.row {
-  padding: 0 2em;
-}
- nav li,
-  nav li:nth-child(even),
-  nav li:nth-child(odd) {
-    display: inline-block;
-    float: none;
-    width: auto;
-    padding: 0;
-  }
-  nav a {
-      padding: 0em 1em 0em 1em;
-  }
-  [class*='col-']{
-    margin-left: 4%;
-    margin-right: 0%;
-  }
-  .col-1-2,
-  .col-2,
-  [class*="sidebar"] {
-    flex: 0 0 44%; 
-  }
-  .col-1-4,
-  .col-3,
-  .col-4 {
-    flex: 0 0 92%;
-  }
-  .reverse [class*='col-'] {
-    margin-left: 0%;
-    margin-right: 4%;
-  }
-}
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 850px) { 
-  .wrapper {
-      width: 97%;
-      max-width: 1200px;
-      float: none;
-  }
-  h2 {
-    font-size: 3em;
-    border-bottom: 2px dotted #c80060;
-  }
-  h3 {
-    font-size: 2em;
-  }
-  div.row {
-    padding: 0;
-  }
-  nav li,
-  nav li:nth-child(even),
-  nav li:nth-child(odd) {
-    display: inline-block;
-    float: none;
-    width: auto;
-    padding: 0;
-  }
-  nav a {
-      padding: 0em 1em 0em 1em;
-  }
-  .col-1-2,
-  .col-1-4 {
-    flex: 0 0 20%;
-  }
-  .col-2,
-  .col-2-4 {
-    flex: 0 0 44%;
-  }
-  .col-3 {
-    flex: 0 0 68%;
-  }
-  .col-4 {
-    flex: 0 0 92%;
-  }
-  [class*="sidebar"] {
-    flex: 0 0 100%;
-  }
-  .order-first {
-    order: 1;
-  } 
-  .order-second {
-    order: 2;
-  }
-  .order-third {
-    order: 3;
-  }
-  .order-fourth {
-    order: 4;
-  }
-}
+    @media (min-width: 550px) { 
+      .wrapper {
+          width: 97%;
+          max-width: 767px;
+      }
+    div.row {
+      padding: 0 2em;
+    }
+    nav li,
+      nav li:nth-child(even),
+      nav li:nth-child(odd) {
+        display: inline-block;
+        float: none;
+        width: auto;
+        padding: 0;
+      }
+      nav a {
+          padding: 0em 1em 0em 1em;
+      }
+      [class*='col-']{
+        margin-left: 4%;
+        margin-right: 0%;
+      }
+      .col-1-2,
+      .col-2,
+      [class*="sidebar"] {
+        flex: 0 0 44%; 
+      }
+      .col-1-4,
+      .col-3,
+      .col-4 {
+        flex: 0 0 92%;
+      }
+      .reverse [class*='col-'] {
+        margin-left: 0%;
+        margin-right: 4%;
+      }
+    }
+
+    /*header image*/
+      .header-image {
+        height: 130px;
+        background-image: url:("img/header-850.jpg");
+      }
+
+    /*pintrest layout*/
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        justify-content: space-between;
+      }
+/* Large devices (large desktops, 850px and up) */
+    @media (min-width: 850px) { 
+      .wrapper {
+          width: 97%;
+          max-width: 1200px;
+          float: none;
+      }
+      h2 {
+        font-size: 3em;
+        border-bottom: 2px dotted #c80060;
+      }
+      h3 {
+        font-size: 2em;
+      }
+      div.row {
+        padding: 0;
+      }
+      nav li,
+      nav li:nth-child(even),
+      nav li:nth-child(odd) {
+        display: inline-block;
+        float: none;
+        width: auto;
+        padding: 0;
+      }
+      nav a {
+          padding: 0em 1em 0em 1em;
+      }
+      .col-1-2,
+      .col-1-4 {
+        flex: 0 0 20%;
+      }
+      .col-2,
+      .col-2-4 {
+        flex: 0 0 44%;
+      }
+      .col-3 {
+        flex: 0 0 68%;
+      }
+      .col-4 {
+        flex: 0 0 92%;
+      }
+      [class*="sidebar"] {
+        flex: 0 0 100%;
+      }
+      .order-first {
+        order: 1;
+      } 
+      .order-second {
+        order: 2;
+      }
+      .order-third {
+        order: 3;
+      }
+      .order-fourth {
+        order: 4;
+      }
+    }
+    /*pintrest layout*/
+    ul {
+      margin: 0;
+      padding: 0;
+      justify-content: space-between;
+    }
